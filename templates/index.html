@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crud Hospitalar | NU</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css')}}">
 </head>
 <body>
     <h2>Pacient form</h2>
@@ -12,6 +13,6 @@
     <h2>Pacient list</h2>
     <div c-container="{{ url_for('pacientes.lista_pacientes')}}"></div>
         
-    <script src="{{ url_for('static', filename='./Javascript/lib.js')}}"></script>
+    <script src="{{ url_for('static', filename='/lib.js')}}"></script>
 </body>
 </html>
