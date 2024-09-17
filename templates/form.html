@@ -1,0 +1,39 @@
+<form class="c-form" 
+    {% if pacientes %}
+        action="{{ url_for('pacientes.atualizar_pacientes', pacientes_id=pacientes.id)}}"
+    {% else %}
+        action="{{ url_for('pacientes.inserir_pacientes')}}"
+    {% endif %}
+     
+    {% if pacientes %}
+        method="PUT"
+    {% else %}
+        method="POST"
+    {% endif %}
+
+    {% if pacientes %}
+        c-swap=".pacientes-{{ pacientes.id }}"
+    {% else %}
+        c-append="#list-pacientes"
+    {% endif %} 
+
+    c-reload-container="True"
+    >
+    <p>
+        <label for="name">Nome: </label> <br>
+        <input type="text" name="name" id="name"{% if pacientes %}value="{{ pacientes.name }}"{% endif %}>
+    </p>
+
+    <p>
+        <label for="email">Email: </label> <br>     
+        <input type="email" name="email" id="email"{% if pacientes %}value="{{ pacientes.email }}"{% endif %}>
+    </p>
+
+    <p>
+        <label for="problem">Problema: </label> <br>
+        <input type="text" name="problem" id="problem"{% if pacientes %}value="{{ pacientes.problem }}"{% endif %}>
+    </p>
+    <button type="submit">
+        {% if pacientes %} Salvar {% else %} Cadastrar {% endif %}
+    </button>
+</form>

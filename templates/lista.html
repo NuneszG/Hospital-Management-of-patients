@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Situação</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody id="list-users">
+        {% for pacientes in pacientes %}
+            {% include 'pacientes.html' %}
+        {% endfor %}
+    </tbody>
+</table>
