@@ -18,3 +18,4 @@ def config_db():
     
     db.connect()
     db.create_tables([Paciente])
+    

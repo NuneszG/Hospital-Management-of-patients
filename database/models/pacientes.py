@@ -8,3 +8,4 @@ class Paciente(Model):
 
     class Meta:
         database = db
+        
