@@ -21,19 +21,19 @@
     >
     <p>
         <label for="name">Nome: </label> <br>
-        <input type="text" class="form-control" name="name" id="name"{% if pacientes %}value="{{ pacientes.name }}"{% endif %}>
+        <input type="text" name="name" id="name"{% if pacientes %}value="{{ pacientes.name }}"{% endif %}>
     </p>
-
+    
     <p>
         <label for="email">Email: </label> <br>     
-        <input type="email" class="form-control" name="email" id="email"{% if pacientes %}value="{{ pacientes.email }}"{% endif %}>
+        <input type="email" name="email" id="email"{% if pacientes %}value="{{ pacientes.email }}"{% endif %}>
     </p>
 
     <p>
         <label for="problem">Problema: </label> <br>
-        <input type="text" class="form-control" name="problem" id="problem"{% if pacientes %}value="{{ pacientes.problem }}"{% endif %}>
+        <input type="text" name="problem" id="problem"{% if pacientes %}value="{{ pacientes.problem }}"{% endif %}>
     </p>
-    <button type="submit" class="btn btn-primary">
+    <button type="submit">
         {% if pacientes %} Salvar {% else %} Cadastrar {% endif %}
     </button>
 </form>

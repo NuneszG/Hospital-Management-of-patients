@@ -3,17 +3,17 @@
     <td>{{ pacientes.name }}</td>
     <td>{{ pacientes.email }}</td>
     <td> 
-        <button c-get="{{ url_for('pacientes.obter_pacientes', pacientes_id=pacientes.id)}}" class="btn btn-warning">
+        <button c-get="{{ url_for('pacientes.obter_pacientes', pacientes_id=pacientes.id)}}">
             Obter problema: {{ pacientes.id }}
         </button>
     </td>
     <td>
         <button  c-get="{{ url_for('pacientes.editar_paciente', pacientes_id=pacientes.id)}}" 
-                c-target="#form-pacientes"  class="btn btn-success">
+                c-target="#form-pacientes">
             Editar
         </button>
         <button c-delete="{{ url_for('pacientes.deletar_pacientes', pacientes_id=pacientes.id)}}" 
-                c-remove-closest="tr" class="btn btn-danger">
+                c-remove-closest="tr">
             Deletar
         </button>
     </td>

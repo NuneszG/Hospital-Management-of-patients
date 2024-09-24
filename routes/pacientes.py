@@ -71,7 +71,8 @@ def atualizar_pacientes(pacientes_id):
         }
     ]
 
-    print("Dados do paciente foram atualizados: ", dados)
+    print("Dados do paciente foram atualizados:")
+    print("Dados anteriores do paciente: ", dados)
 
     return render_template('pacientes.html', pacientes = pacientes)
 

@@ -1,2 +1,2 @@
 # Hospital Management of patients 
-um simples crud hospitalar. Onde podemos obter o problema do paciente, editar, atualizar e deletar, usando Flask e Peewee ORM.
+in our hospital system, we have a patient management system to get patient data and resolve issues quickly. Using Flask and Peewee ORM.
