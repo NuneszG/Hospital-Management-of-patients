@@ -23,6 +23,7 @@ def inserir_pacientes():
     pacientes = Paciente.create(
         name = data['name'],
         email = data['email'],
+        cidade = data['cidade'],
         problem = data['problem'],
     )
 
@@ -37,7 +38,8 @@ def obter_pacientes(pacientes_id):
         {
             pacientes.name,
             pacientes.problem,
-            pacientes.email
+            pacientes.email,
+            pacientes.cidade
         }
     ]
 
@@ -60,19 +62,19 @@ def atualizar_pacientes(pacientes_id):
     pacientes = Paciente.get_by_id(pacientes_id)
     pacientes.name = data['name']
     pacientes.email = data['email']
+    pacientes.cidade = data['cidade']
     pacientes.problem = data['problem']
     pacientes.save()
 
-    dados = [
-        {
-            pacientes.name,
-            pacientes.email,
-            pacientes.problem
-        }
-    ]
+    dados = {
+        "id": pacientes_id,
+        "name": pacientes.name,
+        "email": pacientes.email,
+        "cidade": pacientes.cidade,
+        "problema": pacientes.problem
+    }
 
-    print("Dados do paciente foram atualizados:")
-    print("Dados anteriores do paciente: ", dados)
+    print("Dados do paciente foram atualizados: ", dados)
 
     return render_template('pacientes.html', pacientes = pacientes)
 

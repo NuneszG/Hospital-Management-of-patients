@@ -2,6 +2,7 @@
     <td>{{ pacientes.id }}</td>
     <td>{{ pacientes.name }}</td>
     <td>{{ pacientes.email }}</td>
+    <td>{{ pacientes.cidade }}</td>
     <td> 
         <button c-get="{{ url_for('pacientes.obter_pacientes', pacientes_id=pacientes.id)}}">
             Obter problema: {{ pacientes.id }}

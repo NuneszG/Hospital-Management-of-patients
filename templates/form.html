@@ -28,7 +28,10 @@
         <label for="email">Email: </label> <br>     
         <input type="email" name="email" id="email"{% if pacientes %}value="{{ pacientes.email }}"{% endif %}>
     </p>
-
+    <p>
+        <label for="cidade">Cidade: </label> <br>
+        <input type="name" name="cidade" id="cidade"{% if pacientes %}value="{{ pacientes.cidade }}"{% endif %}>
+    </p>
     <p>
         <label for="problem">Problema: </label> <br>
         <input type="text" name="problem" id="problem"{% if pacientes %}value="{{ pacientes.problem }}"{% endif %}>
