@@ -22,11 +22,14 @@
     <p>
         <label for="name">Nome: </label> <br>
         <input type="text" name="name" id="name"{% if pacientes %}value="{{ pacientes.name }}"{% endif %}>
-    </p>
-    
+    </p> 
     <p>
         <label for="email">Email: </label> <br>     
         <input type="email" name="email" id="email"{% if pacientes %}value="{{ pacientes.email }}"{% endif %}>
+    </p>
+    <p>
+        <label for="tel">Tel contato: </label> <br>     
+        <input type="tel" name="tel" id="tel"{% if pacientes %}value="{{ pacientes.tel }}"{% endif %}>
     </p>
     <p>
         <label for="cidade">Cidade: </label> <br>
@@ -36,7 +39,7 @@
         <label for="problem">Problema: </label> <br>
         <input type="text" name="problem" id="problem"{% if pacientes %}value="{{ pacientes.problem }}"{% endif %}>
     </p>
-    <button type="submit" id="submit">
+    <button type="submit">
         {% if pacientes %} Salvar {% else %} Cadastrar {% endif %}
     </button>
 </form>

@@ -23,6 +23,7 @@ def inserir_pacientes():
     pacientes = Paciente.create(
         name = data['name'],
         email = data['email'],
+        tel = data['tel'],
         cidade = data['cidade'],
         problem = data['problem'],
     )
@@ -39,6 +40,7 @@ def obter_pacientes(pacientes_id):
             pacientes.name,
             pacientes.problem,
             pacientes.email,
+            pacientes.tel,
             pacientes.cidade
         }
     ]
@@ -62,6 +64,7 @@ def atualizar_pacientes(pacientes_id):
     pacientes = Paciente.get_by_id(pacientes_id)
     pacientes.name = data['name']
     pacientes.email = data['email']
+    pacientes.tel = data['tel']
     pacientes.cidade = data['cidade']
     pacientes.problem = data['problem']
     pacientes.save()
@@ -70,6 +73,7 @@ def atualizar_pacientes(pacientes_id):
         "id": pacientes_id,
         "name": pacientes.name,
         "email": pacientes.email,
+        "telefone": pacientes.tel,
         "cidade": pacientes.cidade,
         "problema": pacientes.problem
     }
