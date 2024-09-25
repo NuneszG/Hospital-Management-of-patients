@@ -33,7 +33,7 @@
         <label for="problem">Problema: </label> <br>
         <input type="text" name="problem" id="problem"{% if pacientes %}value="{{ pacientes.problem }}"{% endif %}>
     </p>
-    <button type="submit">
+    <button type="submit" id="submit">
         {% if pacientes %} Salvar {% else %} Cadastrar {% endif %}
     </button>
 </form>
