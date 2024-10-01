@@ -1,1 +1,2 @@
-alert('Bem vindo ao Sistema hospitalar de pacientes. Obtenha, edite, atualize e delete os dados dos pacientes.')
+"use strict";
+console.log('aaa');

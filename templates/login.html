@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--<link href="./static/output.css" rel="stylesheet">-->
+</head>
+<body>
+    <form action="POST" autocomplete="on">
+        <p>
+            <label for="name">Name: </label> <br>
+            <input type="text" name="nName" id="name">
+        </p>
+        <p>
+            <label for="email">Email: </label> <br>
+            <input type="email" name="email" id="email">
+        </p>
+        <p>
+            <label for="password">Password: </label> <br>
+            <input type="text" name="password" id="password">
+        </p>
+
+        <input type="submit" value="Access" id="submit">
+    </form>
+
+    <script src="{{ url_for('static', filename = '/main.js')}}" defer></script>
+</body>
+</html>

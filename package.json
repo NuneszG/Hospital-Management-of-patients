@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.4.13"
+  },
+  "name": "cls",
+  "version": "1.0.0",
+  "description": "in our hospital system, we have a patient management system to get patient data and resolve issues quickly. Using Flask and Peewee ORM.",
+  "main": "tailwind.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc tailwind --progress --watch"
+  },
+  "author": "Guilherme",
+  "license": "ISC"
+}

@@ -5,4 +5,4 @@ app = Flask(__name__)
 
 config_all(app)
 
-app.run(debug=True)
+app.run(debug = True)
