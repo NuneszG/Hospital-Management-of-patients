@@ -16,15 +16,8 @@ Submit.addEventListener('click', (e) => {
     const passValue: String = Password.value;
 
     if(nameValue == 'admin' && emailValue == 'admin@gmail.com' && passValue == '1731') {
-        Both.innerHTML = 'Logado com sucesso!';
-
-        setTimeout(() => {
-            Both.innerHTML = '';
-        }, 1500);
-
-        setTimeout(() => {
-            location.href = '/Home';
-        }, 1700);
+   
+        location.href = '/Home';
 
         return
     }

@@ -7,26 +7,34 @@
     <link href="./static/output.css" rel="stylesheet">
 </head>
 <body>
-    <div class="w-full max-w-xs">
-        <form action="POST" autocomplete="on">
-            <p>
-                <label for="name">Name: </label> <br>
-                <input type="text" name="nName" id="name" value="admin">
-            </p>
-            <p>
-                <label for="email">Email: </label> <br>
-                <input type="email" name="email" id="email" value="admin@gmail.com">
-            </p>
-            <p>
-                <label for="password">Password: </label> <br>
-                <input type="text" name="password" id="password" value="1731">
-            </p>
-
-            <input type="submit" value="Access" id="submit" onclick="click()">
+    <div class="container mt-28 py-10 px-10 mx-0 min-w-full flex flex-col items-center">
+        <form class="bg-white shadow-md rounded-xl px-8 pt-6 pb-8 mb-4">
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2 text-center" for="name">
+              Name
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" value="admin">
+          </div>
+          <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2 text-center" for="email">
+              Email
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" value="admin@gmail.com">
+          </div>
+          <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2 text-center" for="password">
+              Password
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" value="1731">
+          </div>
+          <div class="flex items-center justify-between text-center">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 w-52 rounded focus:outline-none focus:shadow-outline mx-auto" type="button" onclick="click()" id="submit">
+              Access
+            </button>
+          </div>
         </form>
-    </div>
-    <div id="both"></div>
-
+      </div>
+   
     <script src="{{ url_for('static', filename = '/main.js')}}" defer></script>
 </body>
 </html>
