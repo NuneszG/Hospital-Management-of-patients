@@ -9,5 +9,5 @@ pip install -r requirements.txt
 ### Run
 
 ```
-python main.py ou nodemon main.py
+python main.py
 ```
