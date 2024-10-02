@@ -11,3 +11,8 @@ def login():
 def home():
 
     return render_template('index.html')
+
+@home_route.route('/Users')
+def users():
+
+    return render_template('users.html')
