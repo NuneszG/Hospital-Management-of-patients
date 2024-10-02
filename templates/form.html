@@ -1,45 +1,59 @@
-<form class="c-form" 
-    {% if pacientes %}
-        action="{{ url_for('pacientes.atualizar_pacientes', pacientes_id=pacientes.id)}}"
-    {% else %}
-        action="{{ url_for('pacientes.inserir_pacientes')}}"
-    {% endif %}
-     
-    {% if pacientes %}
-        method="PUT"
-    {% else %}
-        method="POST"
-    {% endif %}
+<div class="container py-5 px-10 mx-0 min-w-full flex flex-col items-center">
+    <form class="c-form bg-gray-50 shadow-md rounded-xl px-8 pt-6 pb-8 mb-4" 
+        {% if pacientes %}
+            action="{{ url_for('pacientes.atualizar_pacientes', pacientes_id=pacientes.id)}}"
+        {% else %}
+            action="{{ url_for('pacientes.inserir_pacientes')}}"
+        {% endif %}
+        
+        {% if pacientes %}
+            method="PUT"
+        {% else %}
+            method="POST"
+        {% endif %}
 
-    {% if pacientes %}
-        c-swap=".pacientes-{{ pacientes.id }}"
-    {% else %}
-        c-append="#list-pacientes"
-    {% endif %} 
+        {% if pacientes %}
+            c-swap=".pacientes-{{ pacientes.id }}"
+        {% else %}
+            c-append="#list-pacientes"
+        {% endif %} 
 
-    c-reload-container="True"
-    >
-    <p>
-        <label for="name">Nome: </label> <br>
-        <input type="text" name="name" id="name"{% if pacientes %}value="{{ pacientes.name }}"{% endif %}>
-    </p> 
-    <p>
-        <label for="email">Email: </label> <br>     
-        <input type="email" name="email" id="email"{% if pacientes %}value="{{ pacientes.email }}"{% endif %}>
-    </p>
-    <p>
-        <label for="tel">Tel contato: </label> <br>     
-        <input type="tel" name="tel" id="tel"{% if pacientes %}value="{{ pacientes.tel }}"{% endif %}>
-    </p>
-    <p>
-        <label for="cidade">Cidade: </label> <br>
-        <input type="name" name="cidade" id="cidade"{% if pacientes %}value="{{ pacientes.cidade }}"{% endif %}>
-    </p>
-    <p>
-        <label for="problem">Problema: </label> <br>
-        <input type="text" name="problem" id="problem"{% if pacientes %}value="{{ pacientes.problem }}"{% endif %}>
-    </p>
-    <button type="submit">
-        {% if pacientes %} Salvar {% else %} Cadastrar {% endif %}
-    </button>
-</form>
+        c-reload-container="True"
+        >
+        <div class="mb-6">
+            <p>
+                <label for="name"  class="block text-gray-700 text-sm font-bold mb-1 text-center">Nome: </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="name" id="name"{% if pacientes %}value="{{ pacientes.name }}"{% endif %}>
+            </p> 
+        </div>
+        <div class="mb-6">
+            <p>
+                <label for="email"  class="block text-gray-700 text-sm font-bold mb-1 text-center">Email: </label>     
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="email" name="email" id="email"{% if pacientes %}value="{{ pacientes.email }}"{% endif %}>
+            </p>
+        </div>
+        <div class="mb-6">
+            <p>
+                <label for="tel"  class="block text-gray-700 text-sm font-bold mb-1 text-center">Tel: </label>     
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="tel" name="tel" id="tel"{% if pacientes %}value="{{ pacientes.tel }}"{% endif %}>
+            </p>
+        </div>
+        <div class="mb-6">
+            <p>
+                <label for="cidade" class="block text-gray-700 text-sm font-bold mb-1 text-center">Cidade: </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="name" name="cidade" id="cidade"{% if pacientes %}value="{{ pacientes.cidade }}"{% endif %}>
+            </p>
+        </div>
+        <div class="mb-4">
+            <p>
+                <label for="problem" class="block text-gray-700 text-sm font-bold mb-1 text-center">Problema: </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="problem" id="problem"{% if pacientes %}value="{{ pacientes.problem }}"{% endif %}>
+            </p>
+        </div>
+        <div class="flex items-center justify-between text-center">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 w-52 mt-3 rounded focus:outline-none focus:shadow-outline mx-auto">
+                {% if pacientes %} Salvar {% else %} Cadastrar {% endif %}
+            </button>
+        </div>
+    </form>
+</div>

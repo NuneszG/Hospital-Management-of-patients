@@ -3,9 +3,6 @@ const Email: HTMLInputElement = document.querySelector('#email')!;
 const Password: HTMLInputElement = document.querySelector('#password')!;
 const Submit: HTMLInputElement = document.querySelector('#submit')!;
 
-const Both: HTMLDivElement = document.querySelector('div')!;
-
-const ButtonLocation: HTMLInputElement = document.querySelector('#ButtonLocation')!;
 
 
 Submit.addEventListener('click', (e) => {
@@ -22,9 +19,5 @@ Submit.addEventListener('click', (e) => {
         return
     }
 
-    Both.innerHTML = 'Dados invalidos, tente novamente.';
-
-    setTimeout(() => {
-        Both.innerHTML = '';
-    }, 1700);
+    alert('Dados inválidos, tente novamente.')
 });

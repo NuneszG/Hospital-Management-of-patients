@@ -1,20 +1,20 @@
-<tr class="pacientes-{{ pacientes.id }}">
-    <td>{{ pacientes.id }}</td>
-    <td>{{ pacientes.name }}</td>
-    <td>{{ pacientes.email }}</td>
-    <td>{{ pacientes.tel }}</td>
-    <td>{{ pacientes.cidade }}</td>
+<tr class="pacientes-{{ pacientes.id }} text-center">
+    <td class="pr-6">{{ pacientes.id }}</td>
+    <td class="pr-6">{{ pacientes.name }}</td>
+    <td class="pr-6">{{ pacientes.email }}</td>
+    <td class="pr-6">{{ pacientes.tel }}</td>
+    <td class="pr-6">{{ pacientes.cidade }}</td>
     <td> 
-        <button c-get="{{ url_for('pacientes.obter_pacientes', pacientes_id=pacientes.id)}}">
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-3 ml-3 mr-3 rounded" c-get="{{ url_for('pacientes.obter_pacientes', pacientes_id=pacientes.id)}}" c-target="#exibir" data-modal-target="default-modal" data-modal-toggle="default-modal">
             Obter problema: {{ pacientes.id }}
         </button>
     </td>
     <td>
-        <button  c-get="{{ url_for('pacientes.editar_paciente', pacientes_id=pacientes.id)}}" 
+        <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded ml-2" c-get="{{ url_for('pacientes.editar_paciente', pacientes_id=pacientes.id)}}" 
                 c-target="#form-pacientes">
             Editar
         </button>
-        <button c-delete="{{ url_for('pacientes.deletar_pacientes', pacientes_id=pacientes.id)}}" 
+        <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-3 rounded" c-delete="{{ url_for('pacientes.deletar_pacientes', pacientes_id=pacientes.id)}}" 
                 c-remove-closest="tr">
             Deletar
         </button>

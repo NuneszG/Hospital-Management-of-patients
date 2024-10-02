@@ -3,8 +3,6 @@ const Name = document.querySelector('#name');
 const Email = document.querySelector('#email');
 const Password = document.querySelector('#password');
 const Submit = document.querySelector('#submit');
-const Both = document.querySelector('div');
-const ButtonLocation = document.querySelector('#ButtonLocation');
 Submit.addEventListener('click', (e) => {
     e.preventDefault();
     const nameValue = Name.value;
@@ -14,8 +12,5 @@ Submit.addEventListener('click', (e) => {
         location.href = '/Home';
         return;
     }
-    Both.innerHTML = 'Dados invalidos, tente novamente.';
-    setTimeout(() => {
-        Both.innerHTML = '';
-    }, 1700);
+    alert('Dados inválidos, tente novamente.');
 });

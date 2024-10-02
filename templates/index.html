@@ -7,9 +7,15 @@
     <link href="./static/output.css" rel="stylesheet">
 </head>
 <body>
-    <h2>Pacient form</h2>
-    <div id="form-pacientes" c-container="{{ url_for('pacientes.formulario')}}"></div>
+    <div class="container py-5 px-10 mx-0 min-w-full flex flex-col items-center">
+        <h2 class="text-3xl font-bold">Pacient form</h2>
+        <div id="form-pacientes" c-container="{{ url_for('pacientes.formulario')}}"></div>
 
+
+        <h2 class="text-3xl font-bold">Listagem</h2>
+        <div c-container="{{ url_for('pacientes.lista_pacientes')}}"></div>
+    </div>
+  
 
     <script src="{{ url_for('static', filename = '/lib.js')}}"></script>
 </body>

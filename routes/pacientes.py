@@ -47,7 +47,7 @@ def obter_pacientes(pacientes_id):
 
     print(dados)
 
-    return {"Dados do paciente": 'Foram exibidos no terminal.'}
+    return {"Dados do paciente foram exibidos no terminal": 'ok'}
 
 @pacientes_routes.route('/<int:pacientes_id>/edit')
 def editar_paciente(pacientes_id):
