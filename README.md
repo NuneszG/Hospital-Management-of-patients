@@ -3,14 +3,11 @@ sistema de crud hospitalar. No qual podemos obter o problema do paciente, editar
 
 ### Install
 ```
-
 pip install -r requirements.txt
-
 ```
 
 ### Run
 
 ```
 python main.py ou nodemon main.py
-
 ```
